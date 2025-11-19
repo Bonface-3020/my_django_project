@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="icon" href="{% static 'Images/halow.webp' %}">
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django 101</title>
+</head>
+<body>
+    <a href="{% url 'Home' %}">Home</a>
+    <a href="{% url 'About' %}">About</a>
+    <a href="{% url 'Services' %}">Services</a>
+    <a href="{% url 'Products' %}">Products</a>
+    <a href="{% url 'Contact' %}">Contact</a>
+    <h1>Django 101</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus ut distinctio recusandae ducimus ipsa nesciunt quos quibusdam numquam? Alias illum sapiente autem incidunt optio soluta reiciendis quo rerum, minus impedit porro deserunt id suscipit natus vel nihil eius perferendis necessitatibus ea facilis sed at cum quod. Laudantium incidunt, accusamus aspernatur facilis et blanditiis reprehenderit dolorum perspiciatis non sequi in ullam. Rerum dolore ipsum repudiandae ipsa corrupti dolorem ipsam ab sunt excepturi? Rerum optio id placeat dignissimos obcaecati est non perspiciatis. Ratione aperiam eaque maxime totam illo! Earum, beatae quibusdam numquam animi perferendis hic dolor sit obcaecati rem ratione rerum libero.</p>
+    <img src="{% static 'Images/mustang.webp' %}" alt="Haloween">
+    <img src="{% static 'Images/halow.webp' %}" alt="Haloween">
+    <img src="{% static 'Images/trick.png' %}" alt="Haloween">
+</body>
+</html>
