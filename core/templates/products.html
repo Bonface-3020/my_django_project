@@ -1,17 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <a href="{% url 'Home' %}">Home</a>
-    <a href="{% url 'About' %}">About</a>
-    <a href="{% url 'Services' %}">Services</a>
-    <a href="{% url 'Products' %}">Products</a>
-    <a href="{% url 'Contact' %}">Contact</a>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}Our Catalogue of Chaos{% endblock %}
+
+{% block content %}
+<article>
+    <h2>Our Terrifying Products</h2>
+    <p>Feast your eyes on the most horrific, delightful, and disturbing products the underworld has to offer.</p>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 2rem;">
+        
+        <div class="product-card" style="background: #333; padding: 15px; border-radius: 8px; border: 1px solid var(--color-accent); text-align: center;">
+            <h3 style="color: var(--color-primary);">Animated Zombie Hand</h3>
+            <p>A severed hand that crawls across the table. Batteries included (and cursed).</p>
+            <p style="font-weight: bold; color: var(--color-text-light);">$29.99</p>
+        </div>
+
+        <div class="product-card" style="background: #333; padding: 15px; border-radius: 8px; border: 1px solid var(--color-accent); text-align: center;">
+            <h3 style="color: var(--color-primary);">Fog Machine of Doom</h3>
+            <p>Creates a dense, eerie mist perfect for any dungeon or living room.</p>
+            <p style="font-weight: bold; color: var(--color-text-light);">$79.50</p>
+        </div>
+
+        <div class="product-card" style="background: #333; padding: 15px; border-radius: 8px; border: 1px solid var(--color-accent); text-align: center;">
+            <h3 style="color: var(--color-primary);">Vampire Blood Candy</h3>
+            <p>Deliciously sweet, artificially flavored blood bags. Perfect for trick-or-treaters.</p>
+            <p style="font-weight: bold; color: var(--color-text-light);">$5.00</p>
+        </div>
+    </div>
+</article>
+{% endblock %}

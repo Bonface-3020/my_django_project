@@ -1,17 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <a href="{% url 'Home' %}">Home</a>
-    <a href="{% url 'About' %}">About</a>
-    <a href="{% url 'Services' %}">Services</a>
-    <a href="{% url 'Products' %}">Products</a>
-    <a href="{% url 'Contact' %}">Contact</a>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}Contact the Crypt Keepers{% endblock %}
+
+{% block content %}
+<article>
+    <h2>Contact Us</h2>
+    <p>Have a question that haunts you? Reach out to our team of nocturnal professionals.</p>
+    
+    <form action="" method="POST" style="max-width: 500px;">
+        <div style="margin-bottom: 1rem;">
+            <label for="name" style="display: block; margin-bottom: 0.5rem; color: var(--color-primary);">Name:</label>
+            <input type="text" id="name" name="name" required 
+                   style="width: 100%; padding: 0.75rem; background: #3a3a3a; border: 1px solid var(--color-secondary); color: var(--color-text-light);">
+        </div>
+        <div style="margin-bottom: 1rem;">
+            <label for="email" style="display: block; margin-bottom: 0.5rem; color: var(--color-primary);">Email:</label>
+            <input type="email" id="email" name="email" required 
+                   style="width: 100%; padding: 0.75rem; background: #3a3a3a; border: 1px solid var(--color-secondary); color: var(--color-text-light);">
+        </div>
+        <div style="margin-bottom: 1rem;">
+            <label for="message" style="display: block; margin-bottom: 0.5rem; color: var(--color-primary);">Message:</label>
+            <textarea id="message" name="message" rows="5" required 
+                      style="width: 100%; padding: 0.75rem; background: #3a3a3a; border: 1px solid var(--color-secondary); color: var(--color-text-light);"></textarea>
+        </div>
+        <button type="submit" 
+                style="padding: 1rem 2rem; background-color: var(--color-primary); color: var(--color-background); border: none; cursor: pointer; font-weight: bold; font-size: 1.1rem; transition: background-color 0.3s;">
+            Send Your Shriek
+        </button>
+    </form>
+</article>
+{% endblock %}

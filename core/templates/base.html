@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spooky Corp - {% block title %}Welcome{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        /* Optional: Add a spooky font if available, or a simple serif/sans-serif */
+        h1, h2 { font-family: 'Georgia', serif; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="{% url 'Home' %}">Spooky Corp 👻</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'Home' %}" {% if request.path == '/' %}class="active"{% endif %}>Home</a></li>
+                    <li><a href="{% url 'About' %}" {% if request.path == '/about/' %}class="active"{% endif %}>About</a></li>
+                    <li><a href="{% url 'Products' %}" {% if request.path == '/products/' %}class="active"{% endif %}>Products</a></li>
+                    <li><a href="{% url 'Services' %}" {% if request.path == '/services/' %}class="active"{% endif %}>Services</a></li>
+                    <li><a href="{% url 'Contact' %}" {% if request.path == '/contact/' %}class="active"{% endif %}>Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; {% now "Y" %} Spooky Corp. Beware the Night!</p>
+        </div>
+    </footer>
+</body>
+</html>

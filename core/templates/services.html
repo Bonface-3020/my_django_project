@@ -1,18 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <a href="{% url 'Home' %}">Home</a>
-    <a href="{% url 'About' %}">About</a>
-    <a href="{% url 'Services' %}">Services</a>
-    <a href="{% url 'Products' %}">Products</a>
-    <a href="{% url 'Contact' %}">Contact</a>
+{% extends 'base.html' %}
+
+{% block title %}Our Unholy Services{% endblock %}
+
+{% block content %}
+<article>
+    <h2>Our Sinister Services</h2>
+    <p>We offer a range of services to meet your paranormal needs. Consultations are free (but may cost you your soul).</p>
     
-</body>
-</html>
+    <h3>👻 Haunted Event Planning</h3>
+    <p>We plan custom, professional, and genuinely terrifying events for any occasion—from birthdays to full-blown exorcisms.</p>
+    
+    <h3>🔮 Curse Removal & Application</h3>
+    <p>Need a bad spell lifted? Want to place a tiny curse on your neighbor's lawn gnome? We've got the expertise and the ancient texts.</p>
+
+    <h3>🕸️ Custom Costume Design</h3>
+    <p>From simple zombie makeup to a full-scale animatronic monster, our team of undead designers will make your nightmare a reality.</p>
+</article>
+{% endblock %}
